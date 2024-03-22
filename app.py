@@ -7,6 +7,7 @@ import pandas as pd
 import re
 from IPython.display import HTML 
 
+
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'static/files'
 ocr = PaddleOCR(use_angle_cls=True, lang='en')
@@ -44,4 +45,4 @@ def extract_gst():
     return render_template('result.html',var=HTML(df))
 
 if __name__ == '__main__':   
-    app.run(debug=True)
+    app.run(debug=False)
