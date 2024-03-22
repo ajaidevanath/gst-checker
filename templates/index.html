@@ -1,0 +1,9 @@
+<html> 
+<head> 
+	<title>Upload the file : GFG</title> 
+</head> 
+<form action = "http://127.0.0.1:5000/result" method = "post" enctype="multipart/form-data"> 
+    <input type="file" name="imagefile" value="{{request.form.imagefile}}" id="fileToUpload"/>
+    <input type = "submit" value="Upload"> 
+</form> 
+</html>
