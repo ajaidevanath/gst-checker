@@ -6,8 +6,10 @@ import requests
 import pandas as pd 
 import re
 from IPython.display import HTML 
+from app import app as application 
+from app import create_app 
 
-
+application = create_app()
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'static/files'
 ocr = PaddleOCR(use_angle_cls=True, lang='en')
@@ -44,5 +46,5 @@ def extract_gst():
     df = df.to_html(classes='table table-stripped')
     return render_template('result.html',var=HTML(df))
 
-if __name__ == '__main__':   
-    app.run(debug=False)
+#if __name__ == '__main__':   
+    #app.run(debug=False)
