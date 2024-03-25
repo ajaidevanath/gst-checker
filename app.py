@@ -6,8 +6,8 @@ import requests
 import pandas as pd 
 import re
 from IPython.display import HTML 
-from app import app as application 
-from app import create_app 
+#from app import app as application 
+#from app import create_app 
 
 application = create_app()
 app = Flask(__name__)
