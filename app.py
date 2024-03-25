@@ -46,5 +46,5 @@ def extract_gst():
     df = df.to_html(classes='table table-stripped')
     return render_template('result.html',var=HTML(df))
 
-#if __name__ == '__main__':   
-    #app.run(debug=False)
+if __name__ == '__main__':   
+    app.run(debug=False)
