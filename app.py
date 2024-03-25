@@ -6,11 +6,10 @@ import requests
 import pandas as pd 
 import re
 from IPython.display import HTML 
-#from app import app as application 
-#from app import create_app 
-
-application = create_app()
 app = Flask(__name__)
+from app import app as application 
+from app import create_app 
+application = create_app()
 app.config['UPLOAD_FOLDER'] = 'static/files'
 ocr = PaddleOCR(use_angle_cls=True, lang='en')
 
