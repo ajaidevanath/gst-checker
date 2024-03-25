@@ -67,3 +67,4 @@ urllib3==2.2.1
 visualdl==2.5.3
 Werkzeug==3.0.1
 gunicorn==19.7.1
+ipython==8.12.0
