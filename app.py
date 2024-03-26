@@ -22,7 +22,7 @@ def extract_gst():
     if request.method == 'POST':
       f = request.files['imagefile']
       f.save(secure_filename('invoice.pdf'))
-    images = convert_from_path('/Users/ajai_devanathan/paddleocr/invoice.pdf')
+    images = convert_from_path('invoice.pdf')
     for i in range(len(images)):
         images[i].save('page-test.jpeg')  
     result = ocr.ocr('page-test.jpeg', cls=True)
