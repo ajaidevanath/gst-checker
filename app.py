@@ -46,4 +46,4 @@ def extract_gst():
     return render_template('result.html',var=HTML(df))
 
 if __name__ == '__main__':   
-    app.run(debug=False)
+    app.run(debug=False,host='0.0.0.0:10000')
